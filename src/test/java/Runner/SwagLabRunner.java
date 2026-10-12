@@ -8,8 +8,9 @@ import java.awt.*;
 @CucumberOptions (
         features="C:\\Users\\Rahul\\IdeaProjects\\Rahul_SelfPractice_BDD_Framework\\src\\test\\java\\Features",
         glue = {"Steps", "Hooks"},
-        publish = true
-
+        publish = true,
+        plugin = {"pretty","html:Reports/SwagLabReport.html"},
+        tags = "@product_verifyTotalProductCount"
 )
 public class SwagLabRunner extends AbstractTestNGCucumberTests {
 
