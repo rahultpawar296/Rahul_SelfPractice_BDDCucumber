@@ -33,9 +33,11 @@ public class SwagLabCartPage {
         checkoutButton.click();
     }
 
-    public String getTotalCartQuantity()
+    public int getTotalCartQuantity()
     {
-        return totalCartQuantity.getText();
+       String cartquantity= totalCartQuantity.getText().trim();
+        int inttotal = Integer.parseInt(cartquantity);
+        return inttotal;
     }
 
     public String getCartItemtitle()

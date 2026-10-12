@@ -90,12 +90,12 @@ public class SwagLabHomePage
         return actTotalProductSize;
     }
 
-    public void clickOnJacketAddToCartBtn()
+    public void clickOnbikeLightAddToCartBtn()
     {
         bikeLightAddToCart.click();
     }
 
-    public void clickOnBikeLightAddToCartBtn()
+    public void clickOnCartBtn()
     {
         cartButton.click();
     }
