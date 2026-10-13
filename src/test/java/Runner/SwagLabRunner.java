@@ -10,7 +10,7 @@ import java.awt.*;
         glue = {"Steps", "Hooks"},
         publish = true,
         plugin = {"pretty","html:Reports/SwagLabReport.html"},
-        tags = "@BikeLight_product_checkoutWithFinalSubmit"
+        tags = "@product_checkoutWithSubmit_usingScenarioOutline"
 )
 public class SwagLabRunner extends AbstractTestNGCucumberTests {
 

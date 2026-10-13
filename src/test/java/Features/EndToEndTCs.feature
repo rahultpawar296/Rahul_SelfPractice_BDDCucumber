@@ -34,3 +34,34 @@ Feature: SwagLab application end to end feature
     Then verify title of Checkout complete page should be  "Checkout: Complete!"
     Then verify order completion message should be as "Thank you for your order!"
     And wait for 2 sec
+
+  @product_checkoutWithSubmit_usingScenarioOutline
+  Scenario Outline: TC2 - E2E Scenario using scenario outline
+    When user click on Add to Cart Sauce Labs Bike Light item
+    And wait for 2 sec
+    Then use click on Cart Page
+    And wait for 2 sec
+    Then verify title of Cart page should be  "Your Cart"
+    Then verify quantity of items in Cart should be 1
+    Then verify title of added product is "Sauce Labs Bike Light"
+    Then user clicks on checkout button
+    And wait for 2 sec
+    Then verify title of Checkout page should be  "Checkout: Your Information"
+    And user enters First Name as "<FN>>"
+    And user enters Last Name as "<LN>>"
+    And user enters Zip Code as "<PC>>"
+    And wait for 2 sec
+    Then user clicks on Continue button
+    Then verify title of Checkout overview page should be  "Checkout: Overview"
+    And wait for 2 sec
+    Then user clicks on Finish button
+    And wait for 2 sec
+    Then verify title of Checkout complete page should be  "Checkout: Complete!"
+    Then verify order completion message should be as "<expMessage>"
+    And wait for 2 sec
+
+    Examples:
+      |FN    | LN   |PC    |expMessage                |
+      | abc1 | xyz1 | 1111 |Thank you for your order! |
+      | abc2 | xyz2 | 2222 |Thank you for your order! |
+      | abc3 | xyz3 | 3333 |Thank you for your order! |
